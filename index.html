@@ -1,0 +1,709 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example of Twitter Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!-- Include the bootstrap stylesheets -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <style>
+            body  {
+                background-image: url("http://www.neovisual.cz/files/V0779-d9.jpg");
+                background-color: #cccccc;
+            }
+            h2.title, label {
+                color: #FFAE2E;
+            }
+            #submit {
+                background-color: #FFAE2E;
+                color: #FFFFFF;
+                font-weight: bold;
+            }
+            div.divide-line {
+                margin-top: 80px;
+                margin-bottom: 40px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+            @media (min-width: 480px) {
+                h4 {
+                    font-size: 18px;
+                }
+            }
+            @media (min-width: 768px) {
+                div.divide-line {
+                    margin-top: 0px;
+                }
+                h4 {
+                    font-size: 24px;
+                }
+                p.chart-info {
+                    font-size: 16px;
+                }
+            }
+            .nav-tabs > li.active > a,
+            .nav-tabs > li.active > a:hover,
+            .nav-tabs > li.active > a:focus {
+                border: 1px solid #FFAE2E;
+            }
+            .nav-tabs > li.first {
+                padding-right: 2px;
+            }
+            .nav-tabs > li > a,
+            .nav-tabs > li > a:hover,
+            .nav-tabs > li > a:focus {
+                background-color: #FFAE2E;
+                color: #FFFFFF;
+                //padding: 10px;
+            }
+            .nav-tabs > li.rest {
+                padding-left: 2px;
+            }
+            .carousel-indicators li {
+                border: 1px solid #FFAE2E;
+            }
+            .carousel-indicators .active {
+                background-color: #FFAE2E;
+            }
+            #tableDiv {
+                border: 1px solid #FFAE2E;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                background-color: #FFFFFF;
+            }
+            table.info {
+                margin-bottom: 0px;
+            }
+            span.float {
+                float: right;
+            }
+            span.facebook { 
+                font-weight: bold;
+                color: #FFFFFF;
+            }
+            span.share{
+              color: #FFFFFF;
+            }
+            a {
+                color: #FFAE2E;
+            }
+
+            h2.title {
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+            .form-inline input {
+                border:1px solid #FFAE2E;
+            }
+            .form-inline input.error {
+                border:1px solid red;
+            }
+            .form-inline select.error {
+                border:1px solid red;
+            }
+            .form-inline label.error {
+                color:red;
+                margin:0;
+                display: block;
+                text-align: right;
+                padding-top: 4px;
+            }
+            div.form-group {
+                height: 68px;
+                padding-right: 12px;
+            }
+            div.zillow {
+                float: right;
+                display: inline-block;
+            }
+            div.result {
+                display: none;
+            }
+            div.error {
+                display: none;
+            }
+            h3.red {
+                color: #FF0000;
+                text-align: center;
+            }
+            div.item {
+                text-align: center;
+            }
+            div.carousel-caption {
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                padding-left: 24px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: left;
+                background-color: rgba(1,1,1,0.2);
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            a.left {
+                border-bottom-left-radius: 4px;
+            }
+            a.right {
+                border-bottom-right-radius: 4px;
+            }
+            ol.carousel-indicators {
+                text-align: right;
+                left: 0;
+                width: 100%;
+                padding-right: 50px;
+                margin-left: 0px;
+                bottom: 0px;
+            }
+            h4.chart-caption {
+                margin-bottom: 2px;
+                margin-top: 0px;
+            }
+            p.chart-info {
+                font-size: 12px;
+            }
+            td.align-left {
+                text-align: left;
+            }
+            td.align-right {
+                text-align: right;
+            }
+            div.copyright {
+                text-align: center;
+                color: #FFFFFF;
+            }
+            tr.blue-color {
+                background-color: #FAFAFA;
+            }
+            tr.white-color {
+                background-color: #FFFFFF;
+            }
+            
+            a.black {
+                background: #3B5998;
+                border: 1px solid #334C83;
+                color: #FFFFFF;
+                font: 12px Arial,sans-serif;
+                border-radius: 4px;
+                margin: 0px;
+                padding: 8px 16px 8px 16px;
+
+            }
+            a.button {
+                position : relative;
+                
+                display: inline-block;
+                outline: medium none;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: baseline;
+            }
+            #fb_button{
+             background: #6699FF;
+            }
+        </style>
+        
+        <script>
+            function formatDate(date_string) {
+                console.log(date);
+                var date = Date.parse(date_string);
+                var formatted = $.datepicker.formatDate('d-M-yy', new Date());
+                return formatted;
+            }
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            function numberFormat(number_string){
+                var num = Number(number_string);
+                var num = num.toFixed(2);
+                var formatted = numberWithCommas(num);
+                //var formatted = new Intl.NumberFormat().format(num);
+                return formatted;
+            }
+            $(document).ready(function() {
+                $("#tableDiv").css("padding-top", "20px");
+                $("#tableDiv").css("padding-left", "10px");
+                $("#tableDiv").css("padding-right", "10px");
+                $("#tableDiv").css("padding-bottom", "10px");
+                
+                $("#first").click(function(){
+                    $("#tableDiv").css("padding-top", "20px");
+                    $("#tableDiv").css("padding-left", "10px");
+                    $("#tableDiv").css("padding-right", "10px");
+                    $("#tableDiv").css("padding-bottom", "10px");
+                });
+                $("#rest").click(function(){
+                    $("#tableDiv").css("padding-top", "0px");
+                    $("#tableDiv").css("padding-left", "0px");
+                    $("#tableDiv").css("padding-right", "0px");
+                    $("#tableDiv").css("padding-bottom", "0px");
+                });
+                
+                $(".form-inline").validate({
+                    rules: {
+                        streetInput: {
+                            required: true
+                        },
+                        cityInput: {
+                            required: true
+                        },
+                        stateInput: {
+                            required: true,
+                        },
+                    },
+                    messages: {
+                        streetInput: "This field is required.",
+                        cityInput: "This field is required.",
+                        stateInput: "This field is required."
+                    },
+                    submitHandler: function() {
+                        streetAddress = document.getElementById("streetInput").value;
+                        city = document.getElementById("cityInput").value;
+                        state = document.getElementById("stateInput").value;
+                        $.ajax({
+                            url: "http://bloomwalk-env.elasticbeanstalk.com/",//url: "http://cs-server.usc.edu:19555/hw8.php",
+                            type: "GET",
+                            data: {"streetInput": streetAddress,"cityInput": city,"stateInput": state},  
+                            dataType:"text",
+                            
+                            success: function(response) {
+                               // console.log(response);
+                               
+                                // console.log("inside success func");
+                                var obj = JSON.parse(response);
+                                
+                               // console.log("after json parse");
+                               // console.log(obj.info);
+                                req = JSON.parse(obj.info);
+                               // console.log(req.message);
+                                       
+                                if (req.message.code == "0") {
+                                    //alert("success");
+                                   
+                                   // console.log(req.response.results.result.links.homedetails);
+                                   // console.log(req.response.results.result.address.street);
+                                    
+                                    $("#Zillow_Link").html("<a class=\"toZillow\" href=\""
+                                        + req.response.results.result.links.homedetails + "\">" + req.response.results.result.address.street + ", "
+                                        + req.response.results.result.address.city + ", " + req.response.results.result.address.state + "-"
+                                        + req.response.results.result.address.zipcode + "</a>");
+                                  
+                                    
+                                   // console.log(req.response.results.result.useCode);                           
+                                 
+                                    address = req.response.results.result.address.street + "," +                  req.response.results.result.address.city
+                                 + "," + req.response.results.result.address.state + "-" + req.response.results.result.address.zipcode;
+                                    
+                                    if(req.response.results.result.useCode != "")
+                                    $("#Property_Type").html(req.response.results.result.useCode);
+                                    else
+                                        $("#Property_Type").html("N/A");
+                                    
+                                    if(req.response.results.result.yearBuilt != "")
+                                    $("#Year_Built").html(req.response.results.result.yearBuilt);
+                                    else
+                                          $("#Year_Built").html("N/A");
+                                    
+                                    //alert(req.response.results.result.yearBuilt);
+                                    if(req.response.results.result.lotSizeSqFt != "" && req.response.results.result.lotSizeSqFt !=0)
+                                       $("#Lot_Size").html(numberFormat(req.response.results.result.lotSizeSqFt) +" sq. ft.");
+                                    else
+                                        $("#Lot_Size").html("N/A");
+                                    
+                                    if(req.response.results.result.finishedSqFt != "" && req.response.results.result.finishedSqFt !=0)
+                                       $("#Finished_Area").html(numberFormat(req.response.results.result.finishedSqFt) + " sq. ft.");
+                                    else
+                                        $("#Finished_Area").html("N/A");
+                                    
+                                    if(req.response.results.result.bathrooms != "" && req.response.results.result.bathrooms != 0.00) 
+                                      $("#Bathrooms").html(req.response.results.result.bathrooms);
+                                    else
+                                        $("#Bathrooms").html("N/A");
+                                    
+                                    if(req.response.results.result.bathrooms != "" && req.response.results.result.bathrooms != 0.00)
+                                      $("#Bedrooms").html(req.response.results.result.bathrooms);
+                                    else
+                                        $("#Bedrooms").html("N/A");
+                                    
+                                    if(req.response.results.result.taxAssessmentYear != "")
+                                      $("#Tax_Assessment_Year").html(req.response.results.result.taxAssessmentYear);
+                                    else
+                                        $("#Tax_Assessment_Year").html("N/A");
+                                    
+                                    var taxsassesmentformat = req.response.results.result.taxAssessment;
+                                    if(taxsassesmentformat != ""  && taxsassesmentformat != "0.00")
+                                      $("#Tax_Assessment").html( "$"+ numberFormat(taxsassesmentformat));
+                                    else
+                                        $("#Tax_Assessment").html("N/A");
+                                    if(req.response.results.result.lastSoldPrice != "" && req.response.results.result.lastSoldPrice !=      "0.00")
+                                    $("#Last_Sold_Price").html("$" + numberFormat(req.response.results.result.lastSoldPrice));
+                                    else
+                                        $("#Last_Sold_Price").html("N/A");
+                                    if(req.response.results.result.lastSoldDate != "")
+                                    $("#Last_Sold_Date").html(formatDate(req.response.results.result.lastSoldDate));
+                                    else
+                                        $("#Last_Sold_Date").html("N/A");
+                                   
+                                    if(req.response.results.result.zestimate["last-updated"] != "")
+                                    $("#Property_Estimate_Date").html(formatDate(req.response.results.result.zestimate["last-updated"]));
+                                    else
+                                        $("#Property_Estimate_Date").html("N/A");
+                                    
+                                    if(req.response.results.result.zestimate.amount != "" && req.response.results.result.zestimate.amount != "0.00")
+                                      $("#Property_Estimate_Amount").html("$" + numberFormat(req.response.results.result.zestimate.amount));
+                                    else
+                                        $("#Property_Estimate_Amount").html("N/A");
+                                    
+                                    if (req.response.results.result.zestimate.valueChange > 0) {
+                                        $("#Days_Overall_Change").html(
+                                            "<img src=\"http://cs-server.usc.edu:45678/hw/hw6/up_g.gif\" />"
+                                            + " " + "$" + numberFormat(req.response.results.result.zestimate.valueChange));
+                                    }
+                                    else if (req.response.results.result.zestimate.valueChange < 0) {
+                                       $("#Days_Overall_Change").html(
+                                            "<img src=\"http://cs-server.usc.edu:45678/hw/hw6/down_r.gif\" />"
+                                            + " " + "$" + numberFormat(req.response.results.result.zestimate.valueChange));
+                                   }
+                                   else
+                                        $("#Days_Overall_Change").html("N/A");
+                                    
+                                    if(req.response.results.result.zestimate.valuationRange.low != "" && req.response.results.result.zestimate.valuationRange.low != "0.00"){
+                                    var low  =  numberFormat(req.response.results.result.zestimate.valuationRange.low);
+                                    var high  = numberFormat(req.response.results.result.zestimate.valuationRange.high);
+                                    var rentrange = "$" + low + "-" + "$" + high;
+                                    $("#All_Time_Property_Range").html(rentrange);
+                                    }
+                                    else
+                                        $("#All_Time_Property_Range").html("N/A");
+                                    
+                                    if(req.response.results.result.rentzestimate["last-updated"] != "")
+                                      $("#Rent_Valuation_Date").html(formatDate(req.response.results.result.rentzestimate["last-updated"]));
+                                    else
+                                        $("#Rent_Valuation_Date").html("N/A");
+                                    
+                                    if(req.response.results.result.rentzestimate.amount !="" && req.response.results.result.rentzestimate.amount != "0.00")
+                                    $("#Rent_Valuation_Amount").html("$" + numberFormat(req.response.results.result.rentzestimate.amount));
+                                   else
+                                       $("#Rent_Valuation_Amount").html("N/A");
+                                    
+                                    if (req.response.results.result.rentzestimate.valueChange > 0) {
+                                        $("#Days_Rent_Change").html(
+                                            "<img src=\"http://cs-server.usc.edu:45678/hw/hw6/up_g.gif\" />"
+                                            + " " + "$" + numberFormat(req.response.results.result.rentzestimate.valueChange));
+                                    }
+                                    else if (req.response.results.result.rentzestimate.valueChange <  0) {
+                                        $("#Days_Rent_Change").html(
+                                            "<img src=\"http://cs-server.usc.edu:45678/hw/hw6/down_r.gif\" />"
+                                            + " " + "$" + numberFormat(req.response.results.result.rentzestimate.valueChange));
+                                    }
+                                    else
+                                        $("#Days_Rent_Change").html("N/A");
+                                    
+                                     if(req.response.results.result.rentzestimate.valuationRange.low != "" &&
+                                       req.response.results.result.rentzestimate.valuationRange.low != "0.00"){
+                                     low  = numberFormat(req.response.results.result.rentzestimate.valuationRange.low);
+                                     high = numberFormat(req.response.results.result.rentzestimate.valuationRange.high);
+                                     rentrange = "$" + low + "-" + "$"+ high;
+                                    $("#All_Time_Rent_Range").html(rentrange);
+                                     }
+                                    else
+                                    $("#All_Time_Rent_Range").html("N/A");    
+                                    
+                                 chart1 = JSON.parse(obj.c1);
+                                 var  chart2 = JSON.parse(obj.c2);
+                                 var  chart3 = JSON.parse(obj.c3);     
+                                   
+                                    console.log(chart1.response.url);
+                                    $("#_1year").attr("src",chart1.response.url);
+                                    $("#_5years").attr("src",chart2.response.url);
+                                    $("#_10years").attr("src",chart3.response.url);
+                                   
+                                    $(".chart-info").html(req.response.results.result.address.street + ", "
+                                        + req.response.results.result.address.city + ", " + req.response.results.result.address.state + "-"
+                                        + req.response.results.result.address.zipcode);
+                                    
+                                    $("#result").css("display", "block");
+                                    $("#error").css("display", "none");    
+                                }
+                                else {
+                                    $("#result").css("display", "none");
+                                    $("#error").css("display", "block");
+                                }
+                            },
+                            error: function(response) {
+                                //console.log(response);
+                                alert("ERROR in submitting Search!");
+                            }
+                        });
+                    }   
+                });
+                 $("#fb_button").click(function(){
+                        console.log("post");
+                        FB.ui({
+                            method:'feed',
+                            name:address,
+                            caption:"Property Information from Zillow.com",
+                            description:"Last Sold Price:"+req.response.results.result.lastSoldPrice+" 30 Days Overall                                                   Change:"+req.response.results.result.zestimate.valueChange,
+                            display:'popup',
+                            link:req.response.results.result.links.homedetails,
+                            picture:chart1.response.url
+                        },function(response){
+                            if(response && response.post_id){
+                                alert("Posted Successfully");
+                            }
+                            else{
+                                alert("Not Posted");
+                            }
+                        });
+                    });
+            });
+            
+        </script>
+    </head>
+    
+    <body>
+        
+  <script>
+   window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1568991703332731',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    
+</script>
+        
+        <div class="container">
+            <div class="query-box">
+                <h2 class="title">Search Your Property Here</h2>
+                <form class="form-inline" role="form" method="GET" >
+                    <div class="form-group">
+                        <label for="address">Street Address*:</label>
+                        <input type="text" class="form-control" placeholder="Address" id="streetInput" name="streetInput" autocomplete="on" />
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City*:</label>
+                        <input type="text" class="form-control" placeholder="City" id="cityInput" name="cityInput" autocomplete="on" />
+                    </div>
+                    <div class="form-group">
+                        <label for="State">State*:</label>
+                        <select type="state" class="form-control" name="stateInput" id="stateInput" autocomplete="on">
+                            <option value="" selected="selected"></option>
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="DC">DC</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        
+                        <button type="submit" class="form-control" name="submit" id="submit" value=1>Search</button> 
+                    </div>
+                    <div class="zillow">
+                        <img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_150x40_rounded.gif"
+                             width="150" height="40" alt="Zillow Real Estate Search" />
+                    </div>
+                </form>
+            </div>
+            <div class="divide-line">
+                <hr>
+            </div>
+            <div class="result" id="result">
+                <ul class="nav nav-tabs" role="tablist" id="myTab">
+                    <li class="first active" id="first">
+                        <a href="#Basic-Info" role="tab" data-toggle="tab">Basic Info</a>
+                    </li>
+                    <li class="rest" id="rest">
+                        <a href="#chart" role="tab" data-toggle="tab">Historical Zestimates</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="Basic-Info">
+                        <div id="tableDiv" class="table-responsive">
+                            <table class="table table-hover info">
+                                <tr class="blue-color">
+                                    <td class="align-left" colspan='5'>
+                                        See more details for <span id="Zillow_Link"><a href="#" class="toZillow">Address</a></span> on Zillow
+                                        <span class="float"><button id = "fb_button"  ><span class ="share">Share on </span><span class="facebook">Facebook</span></button></span>
+                                    </td>
+                                </tr>
+                                <tr class="white-color">
+                                    <td class="align-left">Property Type:</td>
+                                    <td class="align-right" id="Property_Type">*</td>
+                                    <td class="align-left">Last Sold Price:</td>
+                                    <td class="align-right" id="Last_Sold_Price">$</td>
+                                </tr>
+                                <tr class="blue-color">
+                                    <td class="align-left">Year Built:</td>
+                                    <td class="align-right" id="Year_Built">*</td>
+                                    <td class="align-left">Last Sold Date:</td>
+                                    <td class="align-right" id="Last_Sold_Date">$</td>
+                                </tr>
+                                <tr class="white-color">
+                                    <td class="align-left">Lot Size:</td>
+                                    <td class="align-right" id="Lot_Size">*</td>
+                                    <td class="align-left">
+                                        Zestimate <sup>&#0174</sup> Property Estimate as of 
+                                        <span id="Property_Estimate_Date"></span>
+                                    </td>
+                                    <td class="align-right" id="Property_Estimate_Amount">$</td>
+                                </tr>
+                                <tr class="blue-color">
+                                    <td class="align-left">Finished Area:</td>
+                                    <td class="align-right" id="Finished_Area">*</td>
+                                    <td class="align-left">30 Days Overall Change:</td>
+                                    <td class="align-right" id="Days_Overall_Change">$</td>
+                                </tr>
+                                <tr class="white-color">
+                                    <td class="align-left">Bathrooms:</td>
+                                    <td class="align-right" id="Bathrooms">*</td>
+                                    <td class="align-left">All Time Property Range:</td>
+                                    <td class="align-right" id="All_Time_Property_Range">$</td>
+                                </tr>
+                                <tr class="blue-color">
+                                    <td class="align-left">Bedrooms:</td>
+                                    <td class="align-right" id="Bedrooms">*</td>
+                                    <td class="align-left">
+                                        Rent Zestimate <sup>&#0174</sup> Valuation as of 
+                                        <span id="Rent_Valuation_Date"></span>
+                                    </td>
+                                    <td class="align-right" id="Rent_Valuation_Amount">$</td>
+                                </tr>
+                                <tr class="white-color">
+                                    <td class="align-left">Tax Assessment Year:</td>
+                                    <td class="align-right" id="Tax_Assessment_Year">*</td>
+                                    <td class="align-left">30 Days Rent Change:</td>
+                                    <td class="align-right" id="Days_Rent_Change">$</td>
+                                </tr>
+                                <tr class="blue-color">
+                                    <td class="align-left">Tax Assessment:</td>
+                                    <td class="align-right" id="Tax_Assessment">*</td>
+                                    <td class="align-left">All Time Rent Range:</td>
+                                    <td class="align-right" id="All_Time_Rent_Range">$</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="chart">
+                        <div id="tableDiv" class="table-responsive">
+                            <div id="carousel-chart" class="carousel slide" data-ride="carousel">
+                              <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-chart" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-chart" data-slide-to="1"></li>
+                                    <li data-target="#carousel-chart" data-slide-to="2"></li>
+                                </ol>
+
+                              <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="" alt="..." id="_1year" class="img-responsive center-block" />
+                                        <div class="carousel-caption">
+                                            <h4 class="chart-caption">Historical Zestimate for the past 1 year</h4>
+                                            <p class="chart-info">Detailed info.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="" alt="..." id="_5years" class="img-responsive center-block" />
+                                        <div class="carousel-caption">
+                                            <h4 class="chart-caption">Historical Zestimate for the past 5 years</h4>
+                                            <p class="chart-info">Detailed info.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="" alt="..." id="_10years" class="img-responsive center-block" />
+                                        <div class="carousel-caption">
+                                            <h4 class="chart-caption">Historical Zestimate for the past 10 years</h4>
+                                            <p class="chart-info">Detailed info.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a class="left carousel-control" href="#carousel-chart" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-chart" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>
+                            © Zillow, Inc., 2006-2014. Use is subject to 
+                            <a href="http://www.zillow.com/corp/Terms.htm">Terms of Use</a><br />
+                            <a href="http://www.zillow.com/zestimate/">What's a Zestimate?</a>";
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="error" id="error">
+                <h3 class="red">No exact match found -- Verify that the given address is correct.</h3>
+            </div>
+        </div>
+    </body>
